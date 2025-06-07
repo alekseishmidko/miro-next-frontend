@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/shared/ui/kit/button";
 import { useBoardsList } from "./model/use-boards-list";
 import { useBoardsFilters } from "./model/use-boards-filters";
-import { useDebouncedValue } from "@/shared/lib/react";
+
 import { useCreateBoard } from "./model/use-create-board";
 
 import { PlusIcon } from "lucide-react";
@@ -18,11 +18,13 @@ import { BoardsSearchInput } from "./ui/boards-search-input";
 import { BoardItem } from "./compose/board-item";
 import { BoardCard } from "./compose/board-card";
 import { BoardsSidebar } from "./ui/boards-sidebar";
+
+import { useDebouncedValue } from "@/shared/lib/react";
 import {
   TemplatesGallery,
   TemplatesModal,
   useTemplatesModal,
-} from "@/features/board-templates";
+} from "../board-templates";
 
 function BoardsListPage() {
   const boardsFilters = useBoardsFilters();
